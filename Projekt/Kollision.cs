@@ -16,8 +16,14 @@ public class Kollision : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "verloren"){
+        if (other.gameObject.tag == "verloren")
+        {
             Destroy(gameObject);
+        }
+
+        if(other.gameObject.tag == "sammelobjekt")
+        {
+            Destroy(other.gameObject);
         }
     }
 }
