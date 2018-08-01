@@ -19,6 +19,7 @@ public class Kollision : MonoBehaviour {
         if (other.gameObject.tag == "verloren")
         {
             Destroy(gameObject);
+            Objekte.KameraStop = 0;
         }
 
         if(other.gameObject.tag == "sammelobjekt")

@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Kamerabewegung : MonoBehaviour {
+public class Objekte : MonoBehaviour {
+    public static float KameraStop = 1;
+
 
 	// Use this for initialization
 	void Start () {
-        
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 4*Objekte.KameraStop);
-
+		
 	}
 }
