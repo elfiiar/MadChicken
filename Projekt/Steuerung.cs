@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spielerbewegung : MonoBehaviour {
+public class Steuerung : MonoBehaviour {
 
 
     //Horizontal velocity
@@ -11,15 +11,17 @@ public class Spielerbewegung : MonoBehaviour {
     //StreckenAnzhal
     public int streckenAnzahl = 2;
 
+
+
     // Use this for initialization
     void Start () {
-
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //Spieler bewegt sich nach vorne
-        GetComponent<Rigidbody>().velocity = new Vector3(horizontal, 0, 3);
+       GetComponent<Rigidbody>().velocity = new Vector3(horizontal, 0, 5);
 
          //bewegt sich nach links
         if(Input.GetKeyDown(KeyCode.A) && (streckenAnzahl>1)){
@@ -37,8 +39,13 @@ public class Spielerbewegung : MonoBehaviour {
             StartCoroutine(stop());
             //damit der Spieler NUR in den 3 Strecken laufen kann
             streckenAnzahl += 1;
+        }
 
-
+        if(Input.GetKeyDown(KeyCode.W)){
+            if (transform.position.y <= 1.5)
+            {
+                GetComponent<Rigidbody>().AddForce(Vector3.up * 80, ForceMode.Impulse);
+            }
         }
 
 	}
