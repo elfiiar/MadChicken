@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Kollision : MonoBehaviour {
 
@@ -25,6 +26,7 @@ public class Kollision : MonoBehaviour {
         if(other.gameObject.tag == "sammelobjekt")
         {
             Destroy(other.gameObject);
+            Score.score += 1;
         }
     }
 }
