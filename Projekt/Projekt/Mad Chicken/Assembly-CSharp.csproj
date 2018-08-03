@@ -59,9 +59,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Kamerabewegung.cs" />
-    <Compile Include="Assets\Kollision.cs" />
-    <Compile Include="Assets\Spielerbewegung.cs" />
+    <Compile Include="Assets\Effekt\sammelobjektEffekt.cs" />
+    <Compile Include="Assets\Script\Kollision.cs" />
+    <Compile Include="Assets\Script\Score.cs" />
+    <Compile Include="Assets\Script\Steuerung.cs" />
+    <Compile Include="Assets\Script\Variablen.cs" />
+    <Compile Include="Assets\Script\Welt.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/elfi/Desktop/GDV/GRIS SS2018/Projekt/Mad Chicken/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

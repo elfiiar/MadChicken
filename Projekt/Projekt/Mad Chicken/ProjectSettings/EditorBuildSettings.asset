@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Score.unity
+    guid: 92aba3930e60949e98c0a2189c100998
+  - enabled: 1
+    path: Assets/Scenes/MadChicken.unity
+    guid: a81bcfeac9f644cd4a5a4ee9e4dbe604
   m_configObjects: {}
