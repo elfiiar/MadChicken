@@ -4,54 +4,52 @@ using UnityEngine;
 
 public class Steuerung : MonoBehaviour {
 
-
-    //Horizontal velocity
-    public float horizontal = 0;
-
-    //StreckenAnzhal
-    public int streckenAnzahl = 2;
+    private const float spurBreite = 2.0f;
+    private CharacterController controller;
+    private float geschwindigkeit = 7.0f;
+    private int spur = 1;
 
 
-
-    // Use this for initialization
-    void Start () {
-        
+	// Use this for initialization
+	void Start () {
+        controller = GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //Spieler bewegt sich nach vorne
-       GetComponent<Rigidbody>().velocity = new Vector3(horizontal, 0, 5);
-
-         //bewegt sich nach links
-        if(Input.GetKeyDown(KeyCode.A) && (streckenAnzahl>1)){
-            horizontal = -2;
-            //ruft stop() auf
-            StartCoroutine(stop());
-            //damit der Spieler NUR in den 3 Strecken laufen kann
-            streckenAnzahl -= 1;
+        //Links
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            WechseleSpur(false);
+        }
+        //Rechts
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            WechseleSpur(true);
         }
 
-        //bewegt sich nach rechts
-        if (Input.GetKeyDown(KeyCode.D) && (streckenAnzahl<=2)){
-            horizontal = 2;
-            //ruft stop() auf
-            StartCoroutine(stop());
-            //damit der Spieler NUR in den 3 Strecken laufen kann
-            streckenAnzahl += 1;
+        //Ausrechnen
+        Vector3 nächstePosition =Vector3.forward * transform.position.z;
+        if(spur == 0 ){
+            nächstePosition += Vector3.left * spurBreite;
+        } else if (spur ==2){
+            nächstePosition += Vector3.right * spurBreite;
+
         }
 
-        if(Input.GetKeyDown(KeyCode.W)){
-            if (transform.position.y <= 1.5)
-            {
-                GetComponent<Rigidbody>().AddForce(Vector3.up * 80, ForceMode.Impulse);
-            }
-        }
+        Vector3 moveVector = Vector3.zero;
+        moveVector.x = (nächstePosition - transform.position).normalized.x * geschwindigkeit;
+        moveVector.y = -0.1f;
+        moveVector.z = geschwindigkeit;
 
+        //bewege das Huhn
+        controller.Move(moveVector * Time.deltaTime);
 	}
-    //stoppt nach 0,5s, damit es nicht an den Zaun fährt
-    IEnumerator stop(){
-        yield return new WaitForSeconds(0.5f);
-        horizontal = 0;
+
+    private void WechseleSpur (bool goingRight){
+        //left
+        //wenn goingRight = true, dann 1; wenn false -1
+        spur += (goingRight) ? 1 : -1;
+        spur = Mathf.Clamp(spur, 0, 2);
     }
 }
