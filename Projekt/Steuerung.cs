@@ -20,12 +20,16 @@ public class Steuerung : MonoBehaviour {
         //Links
         if(Input.GetKeyDown(KeyCode.A))
         {
-            WechseleSpur(false);
+            spur += -1;
+            spur = Mathf.Clamp(spur, 0, 2);
+
         }
         //Rechts
         if (Input.GetKeyDown(KeyCode.D))
         {
-            WechseleSpur(true);
+            spur += 1;
+            spur = Mathf.Clamp(spur, 0, 2);
+
         }
 
         //Ausrechnen
@@ -46,10 +50,4 @@ public class Steuerung : MonoBehaviour {
         controller.Move(moveVector * Time.deltaTime);
 	}
 
-    private void WechseleSpur (bool goingRight){
-        //left
-        //wenn goingRight = true, dann 1; wenn false -1
-        spur += (goingRight) ? 1 : -1;
-        spur = Mathf.Clamp(spur, 0, 2);
-    }
 }
