@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Steuerung : MonoBehaviour {
-
+    
     private const float spurBreite = 2.0f;
     private CharacterController controller;
     private float geschwindigkeit = 7.0f;
     private int spur = 1;
 
-    private float jumpForce = 2.0f;
+    private float jumpForce = 5.0f;
     private float gravity = 12.0f;
     private float verticalVelocity;
+
 
 
 	// Use this for initialization
@@ -38,17 +39,16 @@ public class Steuerung : MonoBehaviour {
         }
 
         //Springen
-        if(controller.isGrounded){
+        if (controller.isGrounded){
             verticalVelocity = -0.1f;
+
             if (Input.GetKeyDown(KeyCode.W))
             {
                 verticalVelocity = jumpForce;
             }
-            else
-            {
-                verticalVelocity -= (gravity * Time.deltaTime);
-            }
         }
+        verticalVelocity -= (gravity * Time.deltaTime);
+
 
 
     
