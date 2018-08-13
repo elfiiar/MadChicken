@@ -17,16 +17,10 @@ public class Kollision : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "verloren")
+        if (hit.gameObject.tag == "verloren")
         {
             Destroy(gameObject);
-            Objekte.KameraStop = 0;
-        }
-
-        if(other.gameObject.tag == "sammelobjekt")
-        {
-            Destroy(other.gameObject);
-            Score.score += 1;
+      
         }
     }
 }
