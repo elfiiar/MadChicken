@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 7db115142f8f34fa293227738093de45
+  productGUID: c2b309af7e0c44738895b166b732c88c
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Mad Chicken
+  productName: MadChickenV3
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -662,8 +662,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 940230e3-64bf-47e7-ae4a-83021a05ef9e
-  projectName: Mad Chicken
+  cloudProjectId: 1af8c6db-f09e-4ce2-885b-4b7af4a26d8d
+  projectName: MadChickenV3
   organizationId: elfiar
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

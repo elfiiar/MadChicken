@@ -4,17 +4,16 @@ using System.Collections;
 
 public class Score : MonoBehaviour
 {
-    public static int score;    
-    public static float time;
+    public static int score;        // The player's score.
 
 
-    Text text;                     
+    Text text;                      // Reference to the Text component.
+
 
     void Awake()
     {
+        // Set up the reference.
         text = GetComponent<Text>();
-        time += Time.deltaTime;
-
 
     }
 
@@ -22,8 +21,6 @@ public class Score : MonoBehaviour
     void Update()
     {
         // Set the displayed text to be the word "Score" followed by the score value.
-        text.text = "Score: " + score;
-
-
+        text.text = "Eggs: " + score;
     }
 }

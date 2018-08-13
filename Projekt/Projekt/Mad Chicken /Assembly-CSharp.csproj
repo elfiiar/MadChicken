@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{B75BFE7D-E855-C97B-8076-C0715F769F18}</ProjectGuid>
+    <ProjectGuid>{74E463A1-0C01-5A6C-2EB4-953E9ABD70DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,20 +59,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Effekt\sammelobjektEffekt.cs" />
+    <Compile Include="Assets\Script\Kamera.cs" />
     <Compile Include="Assets\Script\Kollision.cs" />
+    <Compile Include="Assets\Script\sammelobjektEffekt.cs" />
     <Compile Include="Assets\Script\Score.cs" />
     <Compile Include="Assets\Script\Steuerung.cs" />
+    <Compile Include="Assets\Script\strecken.cs" />
     <Compile Include="Assets\Script\text.cs" />
     <Compile Include="Assets\Script\Variablen.cs" />
-    <Compile Include="Assets\Script\Welt.cs" />
-    <Compile Include="Assets\strecken.cs" />
-    <None Include="Assets\Wispy Sky\ReadMe.txt" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/elfi/Desktop/GDV/Mad Chicken /Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/elfi/Desktop/MadChickenV3/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/elfi/Desktop/GDV/Mad Chicken /Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/elfi/Desktop/MadChickenV3/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

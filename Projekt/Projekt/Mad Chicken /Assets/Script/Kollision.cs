@@ -3,38 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Kollision : MonoBehaviour {
+    
+    public float warteZeit = 0;
 
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-    void OnCollisionEnter(Collision other)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (other.gameObject.tag == "verloren")
+        if (hit.gameObject.tag == "verloren")
         {
-            Destroy(gameObject);
-            Variablen.WeltStop = 0;
-            Variablen.status = "FAIL";
-        }
+            // Destroy(this.gameObject);
 
-        if(other.gameObject.tag == "sammelobjekt")
+            SceneManager.LoadScene("GameOver");
+
+
+        }
+     
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "egg")
         {
             Destroy(other.gameObject);
             Score.score += 1;
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.name =="exit"){
-            SceneManager.LoadScene("GameOver");
         }
     }
 }

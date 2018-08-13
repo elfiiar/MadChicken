@@ -10,10 +10,7 @@ public class Variablen : MonoBehaviour {
     //Zeit
     public static float time;
 
-    //game over
-    public static string status="";
-    public static float WeltStop = 1;
-    public float warteZeit = 0;
+   
 
 
 	// Use this for initialization
@@ -28,13 +25,7 @@ public class Variablen : MonoBehaviour {
 
         time += Time.deltaTime;
 
-        if(status == "FAIL"){
-            warteZeit += Time.deltaTime;
-        }
 
-        if(warteZeit > 1){
-            SceneManager.LoadScene("GameOver");
-        }
 
 	}
 }

@@ -148,7 +148,7 @@ TextMesh:
   m_FontSize: 30
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 98f52fd9eb38245e8a1b67a11df33a07, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -167,7 +167,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 98f52fd9eb38245e8a1b67a11df33a07, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 753183226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 664d8e8b52f3f4987a0c00351e160a6e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca49cb61127224c40813da0423c114ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &769984040
@@ -307,10 +307,10 @@ TextMesh:
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 50
+  m_FontSize: 70
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 98f52fd9eb38245e8a1b67a11df33a07, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -329,7 +329,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 98f52fd9eb38245e8a1b67a11df33a07, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -356,7 +356,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1560327758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.8, y: 16.2, z: 21}
+  m_LocalPosition: {x: -14.44, y: 16.2, z: 21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1846653028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 664d8e8b52f3f4987a0c00351e160a6e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca49cb61127224c40813da0423c114ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!102 &1846653030
@@ -489,7 +489,7 @@ TextMesh:
   m_FontSize: 30
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 98f52fd9eb38245e8a1b67a11df33a07, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -508,7 +508,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 98f52fd9eb38245e8a1b67a11df33a07, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

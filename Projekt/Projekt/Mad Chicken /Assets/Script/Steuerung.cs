@@ -3,58 +3,82 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Steuerung : MonoBehaviour {
+    
+    private const float spurBreite = 2.0f;
+    private CharacterController controller;
+    private int spur = 1;
 
-    public Rigidbody rb;
+    private float jumpForce = 6.0f;
+    private float gravity = 12.0f;
+    private float verticalVelocity;
 
-    //Horizontal velocity
-    public float horizontal = 0;
-
-    //StreckenAnzhal
-    public int streckenAnzahl = 2;
+    //geschwindigkeit
+    private float geschwindigkeit = 7.0f;
+   
 
 
 
-    // Use this for initialization
-    void Start () {
-        
+	// Use this for initialization
+	void Start () {
+        controller = GetComponent<CharacterController>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        //Spieler bewegt sich nach vorne
-        rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(horizontal, 0, 0);
 
-         //bewegt sich nach links
-        if(Input.GetKeyDown(KeyCode.A) && (streckenAnzahl>1)){
-            horizontal = -2;
-            //ruft stop() auf
-            StartCoroutine(stop());
-            //damit der Spieler NUR in den 3 Strecken laufen kann
-            streckenAnzahl -= 1;
+    // Update is called once per frame
+    void Update()
+    {
+       
+
+
+        //Links
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            spur += -1;
+            spur = Mathf.Clamp(spur, 0, 2);
+
+        }
+        //Rechts
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            spur += 1;
+            spur = Mathf.Clamp(spur, 0, 2);
+
         }
 
-        //bewegt sich nach rechts
-        if (Input.GetKeyDown(KeyCode.D) && (streckenAnzahl<=2)){
-            horizontal = 2;
-            //ruft stop() auf
-            StartCoroutine(stop());
-            //damit der Spieler NUR in den 3 Strecken laufen kann
-            streckenAnzahl += 1;
-        }
-       // springen
-        if(Input.GetKeyDown(KeyCode.W)){
-            if (transform.position.y <= 1.5)
+        //Springen
+        if (controller.isGrounded){
+            verticalVelocity = -0.1f;
+
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                rb.AddForce(new Vector3(0, 55, 0), ForceMode.Impulse);
-
+                verticalVelocity = jumpForce;
             }
         }
+        verticalVelocity -= (gravity * Time.deltaTime);
 
+    
+        //Ausrechnen
+        Vector3 nächstePosition =Vector3.forward * transform.position.z;
+        if(spur == 0 ){
+            nächstePosition += Vector3.left * spurBreite;
+        } else if (spur ==2){
+            nächstePosition += Vector3.right * spurBreite;
+
+        }
+
+        Vector3 moveVector = Vector3.zero;
+        moveVector.x = (nächstePosition - transform.position).normalized.x * geschwindigkeit;
+        moveVector.y = verticalVelocity;
+        moveVector.z = geschwindigkeit;
+
+        //bewege das Huhn
+        controller.Move(moveVector * Time.deltaTime);
+
+        //leichtes Rotieren beim Spurwechsel
+        Vector3 dir = controller.velocity;
+        dir.y = 0;
+        transform.forward = Vector3.Lerp(transform.forward, dir, 0.05f);
 	}
-    //stoppt nach 0,5s, damit es nicht an den Zaun fährt
-    IEnumerator stop(){
-        yield return new WaitForSeconds(0.5f);
-        horizontal = 0;
-    }
+
+   
+ 
 }
