@@ -6,9 +6,11 @@ public class strecken : MonoBehaviour
 {
     public Transform strecke;
     public float ScenePositon = 150;
-    public float ScenePositionObj = 5;
+    public float ScenePositionObj = 25;
     public float ScenePositionScheune = 10;
-    public float ScenePositionSC = 5;
+    public float ScenePositionSC = 25;
+    public float ScenePositionEgg = 25;
+
 
 
 
@@ -35,44 +37,57 @@ public class strecken : MonoBehaviour
 
         if (ScenePositionObj < 500)
         {
-            randNum = Random.Range(0, 27);
-            if (randNum == 1 || randNum == 2 || randNum == 3 )
-            {
-                var childobj = Instantiate(eggObj, new Vector3(0, 1, ScenePositionObj), eggObj.rotation);
-                childobj.transform.parent = transform;
+            randNum = Random.Range(0, 15);
+            //______________Eggs_____________
 
-            }
-            if (randNum == 4 || randNum == 5 || randNum == 6)
+            if (randNum == 1 )
             {
-                var childobj = Instantiate(eggObj, new Vector3(2, 1, ScenePositionObj), eggObj.rotation);
-                childobj.transform.parent = transform;
-
+                for (int i = 0; i < 5; i++)
+                {
+                    var childobj = Instantiate(eggObj, new Vector3(0, 1, ScenePositionEgg+=3), eggObj.rotation);
+                    childobj.transform.parent = transform;
+                }
             }
-            if (randNum == 7 || randNum == 8 || randNum == 9)
+            if (randNum == 2)
             {
-                var childobj = Instantiate(eggObj, new Vector3(-2, 1, ScenePositionObj), eggObj.rotation);
-                childobj.transform.parent = transform;
+                for (int i = 0; i < 5; i++)
+                {
+                    var childobj = Instantiate(eggObj, new Vector3(2, 1, ScenePositionEgg += 3), eggObj.rotation);
+                    childobj.transform.parent = transform;
+                }
+            }
+            if (randNum == 3 )
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    var childobj = Instantiate(eggObj, new Vector3(-2, 1, ScenePositionEgg += 3), eggObj.rotation);
+                    childobj.transform.parent = transform;
+                }
             }
 
-            if (randNum == 10|| randNum == 11)
+            //______________Blocker_____________
+            if (randNum == 4)
             {
                 var childobj = Instantiate(blockerObj, new Vector3(0, 0, ScenePositionObj), blockerObj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 12|| randNum == 13)
+            if (randNum == 5)
             {
                 var childobj = Instantiate(blockerObj, new Vector3(2, 0, ScenePositionObj), blockerObj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 14|| randNum == 15 )
+            if (randNum == 6)
             {
                 var childobj = Instantiate(blockerObj, new Vector3(-2, 0, ScenePositionObj), blockerObj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 16|| randNum == 17 )
+
+            //______________Scheune_____________
+
+            if (randNum == 7)
             {
                 var childobj = Instantiate(scheuneObj, new Vector3(2, 0, ScenePositionScheune), scheuneObj.rotation);
                 var childobj2 = Instantiate(scheune2Obj, new Vector3(-2, 0, ScenePositionScheune), scheune2Obj.rotation);
@@ -80,37 +95,42 @@ public class strecken : MonoBehaviour
                 childobj2.transform.parent = transform;
 
             }
-            if (randNum == 18 || randNum == 19 )
+
+            //______________Stein_____________
+
+            if (randNum == 8)
             {
                 var childobj = Instantiate(steinObj, new Vector3(2, 0, ScenePositionObj), steinObj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 20|| randNum == 21)
+            if (randNum == 9)
             {
                 var childobj = Instantiate(steinObj, new Vector3(-2, 0, ScenePositionObj), steinObj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 22|| randNum == 23)
+            if (randNum == 10)
             {
                 var childobj = Instantiate(steinObj, new Vector3(0, 0, ScenePositionObj), steinObj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 24)
+            //______________vogelscheuche_____________
+
+            if (randNum == 11)
             {
                 var childobj = Instantiate(scarecrowobj, new Vector3(2, 0, ScenePositionSC), scarecrowobj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 25)
+            if (randNum == 12)
             {
                 var childobj = Instantiate(scarecrowobj, new Vector3(0, 0, ScenePositionSC), scarecrowobj.rotation);
                 childobj.transform.parent = transform;
 
             }
-            if (randNum == 26)
+            if (randNum == 13)
             {
                 var childobj = Instantiate(scarecrowobj, new Vector3(-2, 0, ScenePositionSC), scarecrowobj.rotation);
                 childobj.transform.parent = transform;
@@ -118,9 +138,11 @@ public class strecken : MonoBehaviour
             }
         
 
-            ScenePositionObj += 5;
+            ScenePositionObj += 7;
             ScenePositionScheune += 11;
             ScenePositionSC += 16;
+            ScenePositionEgg += 10;
+
         }
     
 
