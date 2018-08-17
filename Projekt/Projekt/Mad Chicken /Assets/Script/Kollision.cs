@@ -22,7 +22,7 @@ public class Kollision : MonoBehaviour {
         if (hit.gameObject.tag == "verloren")
         {
             // Destroy(this.gameObject);
-
+            Debug.Log(hit.gameObject);
             SceneManager.LoadScene("GameOver");
 
 

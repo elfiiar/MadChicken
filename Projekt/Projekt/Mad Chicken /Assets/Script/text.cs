@@ -16,7 +16,7 @@ public class text : MonoBehaviour {
             GetComponent<TextMesh>().text = "Score: " + Score.score;
         } 
         if (gameObject.name == "Time"){
-            GetComponent<TextMesh>().text = "Time: " + Variablen.time;
+            GetComponent<TextMesh>().text = "Time: " + GameManager.time;
         }
 	}
 }
