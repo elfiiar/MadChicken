@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{B75BFE7D-E855-C97B-8076-C0715F769F18}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/text.cs">
+    <Files>
+      <File FileName="Assets/Script/Steuerung.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Score.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Kamera.cs" Line="18" Column="30" />
+      <File FileName="Assets/Script/Kollision.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/LevelManager.cs" Line="76" Column="1" />
+      <File FileName="Assets/Script/text.cs" Line="19" Column="60" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
