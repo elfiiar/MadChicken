@@ -70,11 +70,12 @@
     <Compile Include="Assets\Script\strecken.cs" />
     <Compile Include="Assets\Script\text.cs" />
     <Compile Include="Assets\Script\TimeManager.cs" />
+    <None Include="Assets\Prefab\Skybox\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/elfi/Desktop/GDV/LEtze Versio Kopie/MadChicken-master-2/Projekt/Projekt/Mad Chicken /Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/elfi/Desktop/GDV/LEtze Versio/MadChicken-master-2/Projekt/Projekt/Mad Chicken /Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/elfi/Desktop/GDV/LEtze Versio Kopie/MadChicken-master-2/Projekt/Projekt/Mad Chicken /Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/elfi/Desktop/GDV/LEtze Versio/MadChicken-master-2/Projekt/Projekt/Mad Chicken /Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

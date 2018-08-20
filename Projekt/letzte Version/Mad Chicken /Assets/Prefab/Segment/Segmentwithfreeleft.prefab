@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4766471093145928}
-  - component: {fileID: 114329027992886066}
+  - component: {fileID: 114704213695022166}
   m_Layer: 0
   m_Name: CoinLine
   m_TagString: Untagged
@@ -854,19 +854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13157ac19544bc0aef1798657db9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114329027992886066
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207148789236522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c0be077c32144719f6d55989091477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxEgg: 5
-  chanceToSpawn: 0.9
 --- !u!114 &114519801361410580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -919,6 +906,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13157ac19544bc0aef1798657db9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114704213695022166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207148789236522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6db53220569c45d981a07c3313af36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCoin: 5
+  chanceToSpawn: 0.9
+  forceSpawnAll: 0
 --- !u!114 &114951944173145250
 MonoBehaviour:
   m_ObjectHideFlags: 1
