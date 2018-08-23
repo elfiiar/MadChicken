@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
     
-    //Idee&Code ist teilweise von https://www.youtube.com/watch?v=8QDwcJIZz9w&t=70s; teilweise selbst
+    //Idee&Code ist teilweise von https://www.youtube.com/watch?v=8QDwcJIZz9w&t=70s ; teilweise selbst
 
     private GameObject player;
 
@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour {
     private int anzahlAktiverSegmente;
     private int derzeitigerSpawnZ;
     private int y1, y2, y3;
+
+    public int lengthproSegment = 15;
 
     //Lists
     public List<Segment> availableSegments = new List<Segment>();
@@ -53,9 +55,7 @@ public class LevelManager : MonoBehaviour {
 
     private void SpawnSegment()
     {
-        List<Segment> possibleSeg = availableSegments.FindAll(x => x.beginY1 == y1 || x.beginY2 == y2 || x.beginY3 == y3);
-        int id = Random.Range(0, possibleSeg.Count);
-
+        int id = Random.Range(0, availableSegments.Count);
         //erstellt ein Gameobject go und Instantiatet ein Segment aus der Liste mit dem Index (id)
         //Segment s wird dann GetComponent von typ Segment zugewiesen
         //s wird in Index 0 eingefügt
@@ -63,17 +63,13 @@ public class LevelManager : MonoBehaviour {
         Segment s = go.GetComponent<Segment>();
         segments.Insert(0, s);
 
-        y1 = s.endY1;
-        y2 = s.endY2;
-        y3 = s.endY3;
-
         //s wird LevelMananger als child hinzugefügt
         s.transform.SetParent(transform);
         //positioniert in der z Achse * derzeitigerSpawnz
         s.transform.localPosition = Vector3.forward * derzeitigerSpawnZ;
 
-        //DerzeitigerSpawnZ +=Länge vom Segment 
-        derzeitigerSpawnZ += s.length;
+        //DerzeitigerSpawnZ += Länge vom Segment 
+        derzeitigerSpawnZ += lengthproSegment;
         //anzahlAktiverSegmente wird addiert
         anzahlAktiverSegmente++;
     }
