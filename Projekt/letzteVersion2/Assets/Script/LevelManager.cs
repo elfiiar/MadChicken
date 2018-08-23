@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
     
-    //Idee&Code ist teilweise von https://www.youtube.com/watch?v=8QDwcJIZz9w&t=70s ; teilweise selbst
+    //Idee ist teilweise von https://www.youtube.com/watch?v=8QDwcJIZz9w&t=70s ; größtenteils selbst
 
     private GameObject player;
 
@@ -18,9 +18,9 @@ public class LevelManager : MonoBehaviour {
     public int lengthproSegment = 15;
 
     //Lists
-    public List<Segment> availableSegments = new List<Segment>();
+    public List<GameObject> availableSegments = new List<GameObject>();
     //[HideInInspector]
-    public List<Segment> segments = new List<Segment>();
+    public List<GameObject> segments = new List<GameObject>();
 
     private void Awake()
     {
@@ -46,8 +46,7 @@ public class LevelManager : MonoBehaviour {
 
         //schaut das nicht mehr als 15 Segmente aktiv sind
         if(anzahlAktiverSegmente >= maxSegments){
-            segments[anzahlAktiverSegmente - 1].DeSpawn();
-          //  segments.RemoveAt(anzahlAktiverSegmente - 1);
+            segments[anzahlAktiverSegmente - 1].SetActive(false);
             anzahlAktiverSegmente--;
         }
     }
@@ -55,22 +54,22 @@ public class LevelManager : MonoBehaviour {
 
     private void SpawnSegment()
     {
-        int id = Random.Range(0, availableSegments.Count);
         //erstellt ein Gameobject go und Instantiatet ein Segment aus der Liste mit dem Index (id)
-        //Segment s wird dann GetComponent von typ Segment zugewiesen
-        //s wird in Index 0 eingefügt
-        GameObject go = Instantiate(availableSegments[id].gameObject) as GameObject;
-        Segment s = go.GetComponent<Segment>();
-        segments.Insert(0, s);
-
-        //s wird LevelMananger als child hinzugefügt
-        s.transform.SetParent(transform);
+        //go wird in Index 0 eingefügt
+        //go wird LevelMananger als child hinzugefügt
         //positioniert in der z Achse * derzeitigerSpawnz
-        s.transform.localPosition = Vector3.forward * derzeitigerSpawnZ;
-
         //DerzeitigerSpawnZ += Länge vom Segment 
-        derzeitigerSpawnZ += lengthproSegment;
         //anzahlAktiverSegmente wird addiert
+
+        int id = Random.Range(0, availableSegments.Count);
+       
+        GameObject go = Instantiate(availableSegments[id].gameObject) as GameObject;
+        segments.Insert(0, go);
+
+        go.transform.SetParent(transform);
+        go.transform.localPosition = Vector3.forward * derzeitigerSpawnZ;
+
+        derzeitigerSpawnZ += lengthproSegment;
         anzahlAktiverSegmente++;
     }
 }  
