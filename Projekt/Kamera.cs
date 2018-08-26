@@ -1,20 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class Kamera : MonoBehaviour {
-    public Transform focus;
-    public Vector3 abstand = new Vector3(0, 4.0f, -3.0f);
-	// Use this for initialization
-	void Start () {
-        transform.position = focus.position + abstand;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        Vector3 camPosition = focus.position + abstand;
-        camPosition.x = 0;
-        camPosition.y = 4.0f;
-            transform.position = Vector3.Lerp(transform.position, camPosition, Time.deltaTime);
-	}
+public class Kamera : MonoBehaviour
+{
+    //Auto-Init
+    private GameObject player;
+
+    //Anfangsgeschwindigkeit
+    private float geschwindigkeit = 7.0f;
+    //wird addiert wenn Geschwindigkeit erhöht werden soll
+    private float geschwindigkeitErhöhen = 0.1f;
+    //sorgt dafür das es nur einmal pro Framezahl gilt
+    private bool setOnlyOneTime = true;
+
+    // Use this for initialization
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    void Update()
+    {
+        //Bewegt Kamera der z-Achse entlang
+        transform.Translate(Vector3.forward * Time.deltaTime * geschwindigkeit);
+
+        //Geschwindigkeit erhöhen
+        int z = (int)player.transform.position.z;
+        if (z % 50 == 0 && setOnlyOneTime)
+        {
+            geschwindigkeit += geschwindigkeitErhöhen;
+            Debug.Log("geschwindigkeit erhöht");
+            setOnlyOneTime = false;
+
+        }
+        else if (z % 50 != 0)
+        {
+            setOnlyOneTime = true;
+        }
+   
+    }
 }
