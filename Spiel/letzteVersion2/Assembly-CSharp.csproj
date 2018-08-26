@@ -78,10 +78,10 @@
     <Compile Include="Assets\Script\Tueroeffner.cs" />
     <None Include="Assets\Prefab\Skybox\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/elfi/Downloads/Finale-2/letzteVersion2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/elfi/Documents/GitHub/MadChicken/Spiel/letzteVersion2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/elfi/Downloads/Finale-2/letzteVersion2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/elfi/Documents/GitHub/MadChicken/Spiel/letzteVersion2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

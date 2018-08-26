@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour {
     private int derzeitigerSpawnZ;
     private int y1, y2, y3;
 
-    public int lengthproSegment = 15;
+    public int lengthproSegment = 20;
 
     //Lists
     public List<GameObject> availableSegments = new List<GameObject>();
