@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 8e74c61b405e5b74e88be5a266c372b7
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Beck_D
+    100002: Beck_U
+    100004: Butt
+    100006: Cresta_001
+    100008: Cresta_002
+    100010: Cresta_003
+    100012: EyeBlink
+    100014: Finger_L_1_1
+    100016: Finger_L_1_2
+    100018: Finger_L_2_1
+    100020: Finger_L_2_2
+    100022: Finger_L_3_1
+    100024: Finger_L_3_2
+    100026: Finger_L_4_1
+    100028: Finger_L_4_2
+    100030: Finger_R_1_1
+    100032: Finger_R_1_2
+    100034: Finger_R_2_1
+    100036: Finger_R_2_2
+    100038: Finger_R_3_1
+    100040: Finger_R_3_2
+    100042: Finger_R_4_1
+    100044: Finger_R_4_2
+    100046: //RootNode
+    100048: Head
+    100050: Hen
+    100052: Hips
+    100054: Leg_L
+    100056: Leg_R
+    100058: LegUp_L
+    100060: LegUp_R
+    100062: rig
+    100064: root
+    100066: Tail
+    100068: Wing_L
+    100070: Wing_L_Pre
+    100072: Wing_R
+    100074: Wing_R_Pre
+    400000: Beck_D
+    400002: Beck_U
+    400004: Butt
+    400006: Cresta_001
+    400008: Cresta_002
+    400010: Cresta_003
+    400012: EyeBlink
+    400014: Finger_L_1_1
+    400016: Finger_L_1_2
+    400018: Finger_L_2_1
+    400020: Finger_L_2_2
+    400022: Finger_L_3_1
+    400024: Finger_L_3_2
+    400026: Finger_L_4_1
+    400028: Finger_L_4_2
+    400030: Finger_R_1_1
+    400032: Finger_R_1_2
+    400034: Finger_R_2_1
+    400036: Finger_R_2_2
+    400038: Finger_R_3_1
+    400040: Finger_R_3_2
+    400042: Finger_R_4_1
+    400044: Finger_R_4_2
+    400046: //RootNode
+    400048: Head
+    400050: Hen
+    400052: Hips
+    400054: Leg_L
+    400056: Leg_R
+    400058: LegUp_L
+    400060: LegUp_R
+    400062: rig
+    400064: root
+    400066: Tail
+    400068: Wing_L
+    400070: Wing_L_Pre
+    400072: Wing_R
+    400074: Wing_R_Pre
+    4300000: Hen
+    7400000: Default Take
+    7400002: CloseFoot_L
+    7400004: CloseFoot_R
+    7400006: fly
+    7400008: Idle_Look_L
+    7400010: Idle_Look_L_001
+    7400012: Idle_Look_R
+    7400014: Jump
+    7400016: Pick
+    7400018: StandWalk
+    7400020: Walk
+    7400022: Walk_Back
+    9500000: //RootNode
+    13700000: Hen
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: f42301cca777e403e92f189d644e67c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bone
+    second: {fileID: 2100000, guid: c12055f80960e44caaaa14168dc1f4c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: cc29b45865fcb4e328721df92eda1053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 9837d0969732f44489e026624707ec8e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
