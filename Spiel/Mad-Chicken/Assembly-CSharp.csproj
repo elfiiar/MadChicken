@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{7ECBC29F-9FCB-A37C-6266-BF1DFEDD5D45}</ProjectGuid>
+    <ProjectGuid>{35E5812A-6024-A4C8-09AC-521C34929EAC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -79,11 +79,11 @@
     <Compile Include="Assets\Script\text.cs" />
     <Compile Include="Assets\Script\TimeManager.cs" />
     <None Include="Assets\Prefab\Skybox\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/elfi/Downloads/Finale-3/FinalFinalSafeSaaafe/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/elfi/Downloads/Finale-3/FinalFinalSafeSaaafe/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/elfi/Documents/GitHub/MadChicken/Spiel/Mad-Chicken/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>/Users/elfi/Documents/GitHub/MadChicken/Spiel/Mad-Chicken/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
